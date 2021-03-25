@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListLivresComponent implements OnInit {
   titre: string = "La liste des livres";
+  width = 60;
+  height = 80;
+  affichage: boolean = false;
+  onclick() {
+     this.affichage = !this.affichage;
+  }
   livres=[{
     id:1,Name:"Big Data For Dummies",ImageUrl:"https://images-na.ssl-images-amazon.com/images/I/51p6wBow%2B3L._SX389_BO1,204,203,200_.jpg",ShortDescription:"Big data management is one of the major challenges facing business, industry, and not-for-profit organizations",Price:98,Category:'Big data',Etoile:3
   },

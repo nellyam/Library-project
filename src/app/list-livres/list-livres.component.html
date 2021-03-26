@@ -6,6 +6,15 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-3">
+      <select class="btn btn-primary" [(ngModel)]="categorieId" (change)="ChangeCategory()">
+        <option value="all">Catégories</option>
+        <option *ngFor="let categorie of listeCategorie" [value]="categorie"> {{categorie}} </option>
+      </select>
+    </div>
+  </div>
+
   <div class="card-body">
     <div class="table-responsive">
       <table class="table" *ngIf="affichage">
@@ -28,14 +37,8 @@
             <td> {{livre.Price}} </td>
           </tr>
         </tbody>
-
       </table>
-
     </div>
-
   </div>
-
-
-
 </div>
 

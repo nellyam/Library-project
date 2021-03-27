@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ILivre } from '../models/livre'
 
 @Component({
   selector: 'app-list-livres',
@@ -13,7 +14,7 @@ export class ListLivresComponent implements OnInit {
   onclick() {
      this.affichage = !this.affichage;
   }
-  livres=[
+  livres :ILivre[]=[
     {id:1,Name:"Big Data For Dummies",ImageUrl:"https://images-na.ssl-images-amazon.com/images/I/51p6wBow%2B3L._SX389_BO1,204,203,200_.jpg",ShortDescription:"Big data management is one of the major challenges facing business, industry, and not-for-profit organizations",Price:98,Category:'Big data',Etoile:3},
     {id:2,Name:"Big Data",ImageUrl:"https://images-na.ssl-images-amazon.com/images/I/41JjodHnKHL._SX331_BO1,204,203,200_.jpg",ShortDescription:"Bernard Marr’s Data Strategy is a must-have guide to creating a robust data strategy",Price:120,Category:'Big data',Etoile:3.5},
     {id:3,Name:"Database Engineering",ImageUrl:"https://images-na.ssl-images-amazon.com/images/I/51UvR3a63OL._SX379_BO1,204,203,200_.jpg",ShortDescription:"This book has been an evolving dream of ours for about five years. Laine came to the DBA role without any formal technical training.",Price:66,Category:'Database',Etoile:5},
@@ -28,7 +29,7 @@ categorieId:string="all";
 livreTemp:any[] = [];
 ChangeCategory() {
      if(this.categorieId == "all") this.livres = this.livreTemp;
-     this.livres = this.livreTemp.filter(p=> p.Category == this.categorieId);
+     this.livres = this.livreTemp.filter(p => p.Category == this.categorieId);
 }
   constructor() { }
 
@@ -37,3 +38,5 @@ ChangeCategory() {
   }
 
 }
+
+

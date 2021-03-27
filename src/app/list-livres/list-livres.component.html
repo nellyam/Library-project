@@ -1,13 +1,14 @@
 <div class="card">
+  <div class="container">
   <div class="card-header" *ngIf="livres.length > 0"> {{titre}} </div>
-  <div class="row">
+  <div class="row row-spacer">
     <div class="col-2">
       <button class="btn btn-primary" (click)="onclick()"> {{ affichage ? 'Cacher' : 'Afficher' }} </button>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-3">
+  <div class="row row-spacer">
+    <div class="col-4">
       <select class="btn btn-primary" [(ngModel)]="categorieId" (change)="ChangeCategory()">
         <option value="all">Catégories</option>
         <option *ngFor="let categorie of listeCategorie" [value]="categorie"> {{categorie}} </option>
@@ -31,14 +32,15 @@
           <tr *ngFor="let livre of livres">
             <td><img [src]="livre.ImageUrl" [height]="height" [width]="width"></td>
         <!--<td><img src="{{livre.ImageUrl}}"></td>-->
-            <td> {{livre.Name}} </td>
+            <td> {{livre.Name }} </td>
             <td> {{livre.ShortDescription}} </td>
             <td> {{livre.Category}} </td>
-            <td> {{livre.Price}} </td>
+            <td> {{livre.Price | currency : 'EUR' : true}} </td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
+ </div>
 </div>
 

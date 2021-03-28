@@ -1,16 +1,11 @@
 <div class="card">
   <div class="container">
-  <div class="card-header" *ngIf="livres.length > 0"> {{titre}} </div>
-
-
+    <div class="card-header" *ngIf="livres.length > 0"> {{titre}} </div>
     <div class="row row-spacer">
       <div class="col-2">
         <button class="btn btn-primary" (click)="onclick()"> {{ affichage ? 'Cacher' : 'Afficher' }} </button>
       </div>
-
     </div>
-
-
 
   <div class="row row-spacer">
     <div class="col-4">

@@ -31,6 +31,10 @@ ChangeCategory() {
      if(this.categorieId == "all") this.livres = this.livreTemp;
      this.livres = this.livreTemp.filter(p => p.Category == this.categorieId);
 }
+
+onNotify(event: number) {
+  alert(event);
+}
   constructor() { }
 
   ngOnInit(): void {

@@ -5,16 +5,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListLivresComponent } from './list-livres/list-livres.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EtoileComponent } from './etoile/etoile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListLivresComponent
+    ListLivresComponent,
+    EtoileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

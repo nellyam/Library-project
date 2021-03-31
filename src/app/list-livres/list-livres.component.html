@@ -27,6 +27,7 @@
             <th>Catégory</th>
             <th>Prix</th>
             <th>Etoile</th>
+            <th>Détail</th>
           </tr>
         </thead>
         <tbody>
@@ -38,6 +39,7 @@
             <td> {{livre.Category}} </td>
             <td> {{livre.Price | currency : 'EUR' : true}} </td>
             <td><app-etoile [rate]="livre.Etoile" (notify)="onNotify($event)"></app-etoile></td>
+            <td><a class="btn btn-primary" [routerLink]="['/livre', livre.id]">Detail</a></td>
           </tr>
         </tbody>
       </table>
@@ -45,4 +47,5 @@
   </div>
  </div>
 </div>
+
 

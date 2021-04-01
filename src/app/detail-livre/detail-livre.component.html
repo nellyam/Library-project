@@ -1,8 +1,11 @@
 
 <div class="card" *ngIf="livre">
-  <div class="card-header" font-weight-bold> {{livre.Name}} </div>
+  <div class="card-header font-weight-bold"> {{livre.Name}} </div>
   <div class="row">
-    <div class="col">
+    <div class="col-2">
+      <p class="font-weight-bold">Description : </p>
+    </div>
+    <div class="col-9">
       <p> {{livre.ShortDescription}} </p>
     </div>
   </div>

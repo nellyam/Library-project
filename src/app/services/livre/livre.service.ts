@@ -20,6 +20,13 @@ export class LivreService {
   getLivresByCategories(categorie: string): Observable<ILivre[]> {
     return this.getAllLivre().pipe(map(x=>x.filter(p=>p.Category==categorie)))
   }
+
+  getLivreById(id:number):Observable<ILivre> {
+        return this.getAllLivre().pipe(
+          map(livres => {
+            return livres.find(p => p.id == id) as ILivre })
+       )
+  }
 }
 
 //La méthode map d'Observable fonctionne de la même manière que la méthode du même nom sur les tableaux:

@@ -11,8 +11,8 @@ export class DetailLivreGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       //connecter au back end
       //verifier si le pofil==admin
-      alert("Vous avez pas le droit");
-    return false;
+     // alert("Vous avez pas le droit");
+    return true;
   }
 
 }

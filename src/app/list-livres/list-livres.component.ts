@@ -27,7 +27,7 @@ onNotify(event: number) {
 constructor(private serviceLivre:LivreService, private serviceCategorie:CategorieService) { }
 
 ngOnInit(): void {
-  this. getAllLivre();
+  this.getAllLivre();
   this.listeCategorie = this.serviceCategorie.getAllCategories();
 
 }

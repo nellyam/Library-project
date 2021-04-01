@@ -1,1 +1,26 @@
-<p>detail-livre works!</p>
+
+<div class="card" *ngIf="livre">
+  <div class="card-header" font-weight-bold> {{livre.Name}} </div>
+  <div class="row">
+    <div class="col">
+      <p> {{livre.ShortDescription}} </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      <p class="font-weight-bold">Category : </p>
+    </div>
+    <div class="col-9">
+      <p>{{livre.Category}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2">
+      <p class="font-weight-bold">Prix : </p>
+    </div>
+    <div class="col-9"><p>{{livre.Price | currency}}</p></div>
+  </div>
+</div>
+
+
+
